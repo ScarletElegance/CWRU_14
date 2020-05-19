@@ -1,0 +1,16 @@
+<!--pages/index/index.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view class='padding '>
+	<button bindtap="goToshow" class="btn father share-button" style="background-image:url(/imgs/01.png)">	
+		<text class='home-page'>基本数据</text>
+	</button>
+	<button bindtap="goTochart" class="btn father share-button" style="background-image:url(/imgs/02.png)">	
+		<text class='home-page'>查看报表</text>
+	</button>
+	<button bindtap="goTomy"  class="btn father share-button" style="background-image:url(/imgs/03.png)">	
+		<text class='home-page'>个人中心</text>
+	</button>
+
+	
+</view>	

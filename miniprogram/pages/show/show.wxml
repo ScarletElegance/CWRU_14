@@ -1,0 +1,55 @@
+<!--pages/index/index.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view class="section">
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker wh-word">
+      当前设备：
+      <text style="color:#237ab7;font-weight:bold;font-size:18px">{{array[index]}}</text>
+    </view>
+  </picker>
+</view>
+
+<view class="box2">
+  <picker bindchange="bindPickerChange2" value="{{index2}}" range="{{array2}}">
+    <view class="picker wh-word">
+      工况：
+      <text style="color:#37A2DA;font-weight:bold">{{array2[index2]}}</text>
+    </view>
+  </picker>
+</view>
+<view class="echartContainer">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+</view>
+<scroll-view scroll-x scroll-y style="width: 100%; height: 150px;margin-top:5px">
+  <view class='gkContentBox'>
+    <view class="gkTitle wh-word">工况参数</view>
+    <view class="gkTitle wh-word">有效值</view>
+    <view class="gkTitle wh-word">历史最高值</view>
+    <view class="gkTitle wh-word">历史最低值</view>
+  </view>
+  <view class='gkContentBox' wx:for='{{result}}' wx:for:item='item'>
+    <view class="gkContent" style="color:#ffffff">{{item.key}}</view>
+    <view class="gkContent" style="color:#ffffff" data-i="i">{{item.arr[i]}}</view>
+    <view class="gkContent">
+      <text style="color:red">{{item.max}}</text> 
+    </view>
+    <view class="gkContent" style="color:green">{{item.min}}</view>
+  </view>
+</scroll-view>
+
+<view class="box1">
+  <view class='row wh-word'>状态：
+    <text style="color:green;font-weight:bold" data-i="i" wx:if='{{use[i].predict ==0}}'>正常</text>
+    <text style="color:red;font-weight:bold" data-i="i" wx:elif='{{use[i].predict ==1}}'>故障 B</text>
+		<text style="color:red;font-weight:bold" data-i="i" wx:elif='{{use[i].predict ==2}}'>故障 OR</text>
+		<text style="color:red;font-weight:bold" data-i="i" wx:elif='{{use[i].predict ==3}}'>故障 IR</text>
+  </view>
+</view>
+
+<view class="box1">
+  <view class='row wh-word'>
+    <text style="font-weight:bold">{{time}}</text>
+  </view>
+</view>
+	

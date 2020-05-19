@@ -1,0 +1,28 @@
+<!--pages/index/index.wxml-->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view class="table" style='margin-top:80px'>
+<picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+<view class='blue-word' style='margin-left:160px'>机组1</view>
+  <view class="tr bg-w">
+    <view class="th wh-word">驱动端振动</view>
+    <view class="th wh-word">风扇端振动</view>
+    <view class="th wh-word">工作转速</view>
+  </view>
+	 </picker>
+  <block wx:for="{{listData}}" wx:key="{{code}}">
+    <view class="tr bg-g" wx:if="{{index % 2 == 0}}">
+      <view class="td">{{item.code}}</view>
+      <view class="td">{{item.text}}</view>
+      <view class="td">{{item.type}}</view>
+    </view>
+    <view class="tr" wx:else>
+      <view class="td wh-word">{{item.code}}</view>
+      <view class="td wh-word">{{item.text}}</view>
+      <view class="td wh-word">{{item.type}}</view>
+    </view>
+  </block>
+</view>
+<view style='margin-top:30px'>
+<button open-type='share' class="btn-share yellow-btn">分享报表</button>
+</view>

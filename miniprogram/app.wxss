@@ -1,0 +1,21 @@
+/**app.wxss**/
+pages{
+  position: relative;
+  z-index: 9999998;
+  background: #ffffff;
+}
+
+page{
+  width: 100%;
+	height: 100%;
+	background: #000;
+}
+
+
+.yellow-btn{
+	width: 100px;
+	background-color:#FF9500;
+	font-size:14px;
+	font-style: normal;
+	color: #fff;
+}

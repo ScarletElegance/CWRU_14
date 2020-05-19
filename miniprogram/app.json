@@ -1,0 +1,18 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/show/show",
+		"pages/chartone/chartone"
+  ],
+	"window": {
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "wechat",
+		"backgroundColor": "#000000",
+		"backgroundTextStyle": "light",
+		"navigationStyle":"custom"
+	},
+
+  "sitemapLocation": "sitemap.json"
+}
