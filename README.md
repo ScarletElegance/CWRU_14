@@ -47,20 +47,20 @@
 **【miniprogram】**
 
 
-* commpents：
-* components
+* commpents：组件库
+* components：其他组件库
 * imgs：小程序中用到的背景图
 
 * pages
-  *chartonea:
+
+  * chartonea：数据表格页面
   * index：首页
-  * my：
-  * show：
+  * my：个人中心，登录页面
+  * show：数据展示页面
 
   
 * util：用户配置文件
 * app.js / app.json / app.wxss：全局配置文件
-* sitemap.json：
 
 
 
